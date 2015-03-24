@@ -1,0 +1,5 @@
+pip install primes
+
+or
+
+python setup.py install
