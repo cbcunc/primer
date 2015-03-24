@@ -14,7 +14,7 @@ def main(argv):
     """Call primes when the package is run as a script."""
 
     parser = argparse.ArgumentParser(
-    	prog='primes',
+        prog='primes',
         description='Display the first N primes.',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('number',
