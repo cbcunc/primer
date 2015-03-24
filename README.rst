@@ -9,23 +9,23 @@ To use as a package:
     >>> primes.prime(10)
     29
     >>> pg = primes.pgf()
-	>>> pg.next()
-	2
-	>>> pg.next()
-	3
-	>>> pg.next()
-	5
-	>>>
+    >>> pg.next()
+    2
+    >>> pg.next()
+    3
+    >>> pg.next()
+    5
+    >>>
 
 To use as a script:
 
-	usage: python -m primes [-h] [-t] [N]
+    usage: python -m primes [-h] [-t] [N]
 
-	Display the first N primes.
+    Display the first N primes.
 
-	positional arguments:
-	  N           Number of primes to generate (default: 100)
+    positional arguments:
+      N           Number of primes to generate (default: 100)
 
-	optional arguments:
-	  -h, --help  show this help message and exit
-	  -t          Display elapsed time (default: False)
+    optional arguments:
+      -h, --help  show this help message and exit
+      -t          Display elapsed time (default: False)
