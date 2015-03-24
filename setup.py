@@ -24,7 +24,7 @@ setup(name='primes',
                    "License :: OSI Approved :: "
                    "GNU General Public License v2 (GPLv2)",
                    "Topic :: Scientific/Engineering :: Mathematics",
-                   ]
+                   ],
       url="https://github.com/cbcunc/primes",
       zip_safe=False,
       test_suite="primes.tests")
