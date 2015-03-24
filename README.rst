@@ -19,7 +19,7 @@ To use as a package:
 
 To use as a script:
 
-    usage: python -m primes [-h] [-t] [N]
+    $ python -m primes [-h] [-t] [N]
 
     Display the first N primes.
 
