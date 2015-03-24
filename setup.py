@@ -19,12 +19,12 @@ setup(name='primes',
       author_email='cbc@chriscalloway.org',
       description='Brute force prime number objects',
       long_description=readme(),
+      url="https://github.com/cbcunc/primes",
       keywords="Prime number primes primordial",
       classifiers=["Development Status :: 5 - Production/Stable",
                    "License :: OSI Approved :: "
                    "GNU General Public License v2 (GPLv2)",
                    "Topic :: Scientific/Engineering :: Mathematics",
                    ],
-      url="https://github.com/cbcunc/primes",
       zip_safe=False,
       test_suite="primes.tests")
