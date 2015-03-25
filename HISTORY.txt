@@ -1,3 +1,10 @@
+Version 1.2          2015-03-25
+-------------------------------
+- Mark prime generator function private.
+- Update docstrings.
+- Fix test module name.
+- Rename test data.
+
 Version 1.1.1        2015-03-25
 -------------------------------
 - Update README.

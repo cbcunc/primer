@@ -5,8 +5,8 @@
 import unittest
 import primer
 
-primes_10 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ]
-primes_100 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47,
+PRIMES_10 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ]
+PRIMES_100 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47,
               53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107,
               109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167,
               173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229,
@@ -15,21 +15,12 @@ primes_100 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47,
               367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431,
               433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491,
               499, 503, 509, 521, 523, 541, ]
-primorial_10 = 6469693230
-primorial_100 = long("471193079990618495316248783476026042202057477340"
+PRIMORIAL_10 = 6469693230
+PRIMORIAL_100 = long("471193079990618495316248783476026042202057477340"
                      "967552018863483961641533584503422120528925670554"
                      "468197243910409777715799180438028421831503871944"
                      "494399049257903072063599053845231252833986435299"
                      "9310398481791730017201031090L")
-
-
-class TestPGF(unittest.TestCase):
-    """TestCase for primer.pgf."""
-
-    def test_generator(self):
-        """Does calling pgf return a generator?"""
-        pg = primer.pgf()
-        self.assertTrue(hasattr(pg, 'next'))
 
 
 class TestPrimes(unittest.TestCase):
@@ -38,12 +29,12 @@ class TestPrimes(unittest.TestCase):
     def test_primes_10(self):
         """"Compute the first 10 primes."""
 
-        self.assertEqual(primer.primes(10), primes_10)
+        self.assertEqual(primer.primes(10), PRIMES_10)
 
     def test_primes_100(self):
         """Compute the first 100 primes."""
 
-        self.assertEqual(primer.primes(100), primes_100)
+        self.assertEqual(primer.primes(100), PRIMES_100)
 
     def test_primes_str(self):
         """Does calling primes with a string argument raise a TypeError?"""
@@ -64,11 +55,12 @@ class TestPrime(unittest.TestCase):
     def test_prime_10(self):
         """Compute the 10th prime."""
 
-        self.assertEqual(primer.prime(10), primes_10[-1])
+        self.assertEqual(primer.prime(10), PRIMES_10[-1])
 
     def test_prime_100(self):
         """Compute the 100th prime."""
-        self.assertEqual(primer.prime(100), primes_100[-1])
+
+        self.assertEqual(primer.prime(100), PRIMES_100[-1])
 
     def test_prime_str(self):
         """Does calling prime with a string argument raise a TypeError?"""
@@ -101,12 +93,12 @@ class TestPrimorial(unittest.TestCase):
     def test_primorial_10(self):
         """Compute the 10th primorial."""
 
-        self.assertEqual(primer.primorial(10), primorial_10)
+        self.assertEqual(primer.primorial(10), PRIMORIAL_10)
 
     def test_primorial_100(self):
         """Compute the 100th primorial."""
 
-        self.assertEqual(primer.primorial(100), primorial_100)
+        self.assertEqual(primer.primorial(100), PRIMORIAL_100)
 
     def test_primorial_str(self):
         """Does calling primorial with a string argument raise a TypeError?"""

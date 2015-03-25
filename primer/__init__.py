@@ -5,7 +5,7 @@ Package of prime number objects.
 """
 
 
-def prime_generator_function():
+def _prime_generator_function():
     """Return a generator for prime numbers."""
 
     p = [2, ]
@@ -22,23 +22,40 @@ def prime_generator_function():
             q += 1
 
 
-pgf = prime_generator_function
+_pgf = _prime_generator_function
 
 
 def primes(n):
-    """Return a sequence of the first n primes."""
+    """
+    Return a sequence of the first n primes.
 
-    pg = pgf()
+    primes(n) -> [2, 3, 5, ..., Pn]
+
+    where Pn is the nth prime number.
+    """
+
+    pg = _pgf()
     return [pg.next() for x in range(n)]
 
 
 def prime(n):
-    """Return the nth prime."""
+    """
+    Return the nth prime.
+
+    prime(n) -> Pn
+
+    where Pn is the nth prime number.
+    """
 
     return primes(n)[-1]
 
 
 def primorial(n):
-    """Return the nth primorial."""
+    """Return the nth primorial.
+
+    primorial(n) -> Pn#
+
+    where Pn# is the nth primorial number.
+    """
 
     return reduce(lambda x, y: x * y, primes(n))
