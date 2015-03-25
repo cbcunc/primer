@@ -7,6 +7,7 @@ from setuptools import find_packages
 
 __version__ = "1.0.1"
 
+
 def long_description():
     with open("README.rst") as r:
         l1 = r.read()
