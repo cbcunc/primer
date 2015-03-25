@@ -1,6 +1,8 @@
 A primer for prime numbers
 ==========================
 
+Brute force functions for teaching purposes. Not performant.
+
 To use as a package:
 
     >>> import primer
@@ -8,6 +10,8 @@ To use as a package:
     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
     >>> primer.prime(10)
     29
+    >>> primer.primorial(10)
+    6469693230
     >>> pg = primer.pgf()
     >>> pg.next()
     2
