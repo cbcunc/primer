@@ -1,6 +1,6 @@
 Version 1.1          2015-03-25
 -------------------------------
-- Fix Add primorial function.
+- Add primorial function.
 
 Version 1.0.2        2015-03-25
 -------------------------------
