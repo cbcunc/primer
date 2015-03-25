@@ -12,13 +12,6 @@ To use as a package:
     29
     >>> primer.primorial(10)
     6469693230
-    >>> pg = primer.pgf()
-    >>> pg.next()
-    2
-    >>> pg.next()
-    3
-    >>> pg.next()
-    5
     >>>
 
 To use as a script:
