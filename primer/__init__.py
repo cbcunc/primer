@@ -36,3 +36,9 @@ def prime(n):
     """Return the nth prime."""
 
     return primes(n)[-1]
+
+
+def primorial(n):
+    """Return the nth primorial."""
+
+    return reduce(lambda x, y: x * y, primes(n))
