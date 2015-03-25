@@ -1,5 +1,5 @@
-pip install primes
+$ pip install primer
 
 or
 
-python setup.py install
+$ python setup.py install

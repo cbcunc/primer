@@ -1,13 +1,13 @@
 #! /usr/bin/env python
 
 """
-A __main__ namespace for the primes package.
+A __main__ namespace for the primer package.
 """
 
 import sys
 import argparse
 from time import time
-from primes import primes
+from primer import primes
 
 
 def main(argv):

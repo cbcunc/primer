@@ -1,6 +1,6 @@
 #! /usr/bin/env python
 
-"""Setup script for the primes package."""
+"""Setup script for the primer package."""
 
 from setuptools import setup
 from setuptools import find_packages
@@ -11,15 +11,15 @@ def readme():
         return f.read()
 
 
-setup(name='primes',
+setup(name='primer',
       version='1.0',
       license="GPL2",
       packages=find_packages(),
       author='Chris Calloway',
       author_email='cbc@chriscalloway.org',
-      description='Brute force prime number objects',
+      description='A primer for prime numbers',
       long_description=readme(),
-      url="https://github.com/cbcunc/primes",
+      url="https://github.com/cbcunc/primer",
       keywords="Prime number primes primordial",
       classifiers=["Development Status :: 5 - Production/Stable",
                    "License :: OSI Approved :: "
@@ -27,4 +27,4 @@ setup(name='primes',
                    "Topic :: Scientific/Engineering :: Mathematics",
                    ],
       zip_safe=False,
-      test_suite="primes.tests")
+      test_suite="primer.tests")

@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 
-"""Tests for the primes package."""
+"""Tests for the primer package."""
 
 import unittest
-import primes
+import primer
 
 primes_10 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, ]
 primes_100 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
@@ -23,63 +23,63 @@ primes_100 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29,
 
 
 class TestPGF(unittest.TestCase):
-    """TestCase for primes.pgf."""
+    """TestCase for primer.pgf."""
 
     def test_generator(self):
         """Does calling pgf return a generator?"""
-        pg = primes.pgf()
+        pg = primer.pgf()
         self.assertTrue(hasattr(pg, 'next'))
 
 
 class TestPrimes(unittest.TestCase):
-    """TestCase for primes.primes."""
+    """TestCase for primer.primes."""
 
     def test_primes_10(self):
         """"Compute the first 10 primes."""
 
-        self.assertEqual(primes.primes(10), primes_10)
+        self.assertEqual(primer.primes(10), primes_10)
 
     def test_primes_100(self):
         """Compute the first 100 primes."""
 
-        self.assertEqual(primes.primes(100), primes_100)
+        self.assertEqual(primer.primes(100), primes_100)
 
     def test_primes_str(self):
         """Does calling primes with a string argument raise a TypeError?"""
 
         with self.assertRaises(TypeError):
-            primes.primes("100")
+            primer.primes("100")
 
     def test_primes_float(self):
         """Does calling primes with a float argument raise a TypeError?"""
 
         with self.assertRaises(TypeError):
-            primes.primes(10.0)
+            primer.primes(10.0)
 
 
 class TestPrime(unittest.TestCase):
-    """TestCase for primes.prime"""
+    """TestCase for primer.prime"""
 
     def test_prime_10(self):
         """Compute the 10th prime."""
 
-        self.assertEqual(primes.prime(10), primes_10[-1])
+        self.assertEqual(primer.prime(10), primes_10[-1])
 
     def test_prime_100(self):
         """Compute the 100th prime."""
-        self.assertEqual(primes.prime(100), primes_100[-1])
+        self.assertEqual(primer.prime(100), primes_100[-1])
 
     def test_prime_str(self):
         """Does calling prime with a string argument raise a TypeError?"""
 
         with self.assertRaises(TypeError):
-            primes.prime("100")
+            primer.prime("100")
 
     def test_prime_float(self):
         """Does calling prime with a float argument raise a TypeError?"""
 
         with self.assertRaises(TypeError):
-            primes.prime(10.0)
+            primer.prime(10.0)
 
 
 if __name__ == "__main__":

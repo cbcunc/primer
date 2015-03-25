@@ -1,14 +1,14 @@
-Brute force primes demo
-=======================
+A primer for prime numbers
+==========================
 
 To use as a package:
 
-    >>> import primes
-    >>> primes.primes(10)
+    >>> import primer
+    >>> primer.primes(10)
     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-    >>> primes.prime(10)
+    >>> primer.prime(10)
     29
-    >>> pg = primes.pgf()
+    >>> pg = primer.pgf()
     >>> pg.next()
     2
     >>> pg.next()
@@ -19,7 +19,7 @@ To use as a package:
 
 To use as a script:
 
-    $ python -m primes [-h] [-t] [N]
+    $ python -m primer [-h] [-t] [N]
 
     Display the first N primes.
 
