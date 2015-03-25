@@ -12,6 +12,8 @@ To use as a package:
     29
     >>> primer.primorial(10)
     6469693230
+    >>> primer.sieve(40)
+    [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]
     >>>
 
 To use as a script:

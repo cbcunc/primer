@@ -27,7 +27,7 @@ _pgf = _prime_generator_function
 
 def primes(n):
     """
-    Return a sequence of the first n primes.
+    Return the sequence of the first n primes.
 
     primes(n) -> [2, 3, 5, ..., Pn]
 
@@ -59,3 +59,24 @@ def primorial(n):
     """
 
     return reduce(lambda x, y: x * y, primes(n))
+
+
+def sieve(n):
+    """
+    Return the sequence of primes less than n.
+
+    sieve(n) -> (2, 3, 5, ..., Px)
+
+    where Px is the greatest prime less than n.
+
+    Uses the Sieve of Eratosthenes algorithm.
+    """
+
+    p = range(2, n)
+    for x in range(0, (n / 2) - 1):
+        if p[x]:
+            y = (x + 1) * 2
+            z = x + 2
+            m = len(p[y::z])
+            p[y::z] = [0] * m
+    return [q for q in p if q]
