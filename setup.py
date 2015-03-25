@@ -5,7 +5,7 @@
 from setuptools import setup
 from setuptools import find_packages
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 
 def long_description():
@@ -25,7 +25,7 @@ setup(name="primer",
       description="A primer for prime numbers",
       long_description=long_description(),
       url="https://github.com/cbcunc/primer",
-      keywords="Prime number primes primordial",
+      keywords="Prime number primes primorial",
       classifiers=["Development Status :: 5 - Production/Stable",
                    "License :: OSI Approved :: "
                    "GNU General Public License v2 (GPLv2)",
