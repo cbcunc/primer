@@ -4,6 +4,8 @@
 Package of prime number objects.
 """
 
+from functools import reduce
+
 
 def _prime_generator_function():
     """Return a generator for prime numbers."""
@@ -35,7 +37,7 @@ def primes(n):
     """
 
     pg = _pgf()
-    return [pg.next() for x in range(n)]
+    return [next(pg) for x in range(n)]
 
 
 def prime(n):
@@ -72,8 +74,8 @@ def sieve(n):
     Uses the Sieve of Eratosthenes algorithm.
     """
 
-    p = range(2, n)
-    for x in range(0, (n / 2) - 1):
+    p = list(range(2, n))
+    for x in range(0, (n // 2) - 1):
         if p[x]:
             y = (x + 1) * 2
             z = x + 2

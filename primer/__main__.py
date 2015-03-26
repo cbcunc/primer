@@ -4,6 +4,7 @@
 A __main__ namespace for the primer package.
 """
 
+from __future__ import print_function
 import sys
 import argparse
 from time import time
@@ -31,14 +32,14 @@ def main(argv):
         number = int(args.number, 0)
         if args.t:
             start = time()
-        print " ".join([str(n) for n in primes((number))])
+        print(" ".join([str(n) for n in primes((number))]))
         if args.t:
-            print
-            print "Elapsed time is {} seconds.".format(time() - start)
+            print()
+            print("Elapsed time is {} seconds.".format(time() - start))
     except Exception as e:
         parser.print_help()
-        print
-        print e
+        print()
+        print(e)
 
 
 if __name__ == '__main__':
