@@ -164,7 +164,3 @@ class TestSieve(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             primer.sieve(10.0)
-
-
-if __name__ == "__main__":
-    unittest.main()
