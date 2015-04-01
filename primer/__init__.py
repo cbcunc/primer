@@ -7,8 +7,14 @@ Package of prime number objects.
 from functools import reduce
 
 
+def _mul(s):
+    """Compute the product of all the elements in a sequence."""
+
+    return reduce(lambda x, y: x * y, s)
+
+
 def _prime_generator_function():
-    """Return a generator for prime numbers."""
+    """Create a generator for prime numbers."""
 
     p = [2, ]
     while True:
@@ -29,7 +35,7 @@ _pgf = _prime_generator_function
 
 def primes(n):
     """
-    Return the sequence of the first n primes.
+    Compute the sequence of the first n primes.
 
     primes(n) -> [2, 3, 5, ..., Pn]
 
@@ -42,7 +48,7 @@ def primes(n):
 
 def prime(n):
     """
-    Return the nth prime.
+    Compute the nth prime.
 
     prime(n) -> Pn
 
@@ -53,19 +59,19 @@ def prime(n):
 
 
 def primorial(n):
-    """Return the nth primorial.
+    """Compute the nth primorial.
 
     primorial(n) -> Pn#
 
     where Pn# is the nth primorial number.
     """
 
-    return reduce(lambda x, y: x * y, primes(n))
+    return _mul(primes(n))
 
 
 def sieve(n):
     """
-    Return the sequence of primes less than n.
+    Compute the sequence of primes less than n.
 
     sieve(n) -> (2, 3, 5, ..., Px)
 

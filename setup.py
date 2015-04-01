@@ -5,15 +5,15 @@
 from setuptools import setup
 from setuptools import find_packages
 
-__version__ = "1.4"
+__version__ = "1.4.1"
 
 
 def long_description():
     with open("README.rst") as r:
-        l1 = r.read()
+        ld1 = r.read()
     with open("HISTORY.txt") as h:
-        l2 = h.read()
-    return "\n".join([l1, l2, ])
+        ld2 = h.read()
+    return "\n".join([ld1, ld2, ])
 
 
 setup(name="primer",
