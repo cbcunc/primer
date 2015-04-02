@@ -9,4 +9,4 @@ before_script:
 script:
   - python setup.py test
 notifications:
-  irc: "chat.freenode.net#tripython"
+  irc: "chat.freenode.net#renci"
