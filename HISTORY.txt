@@ -1,6 +1,7 @@
 Version 1.4.3        2015-04-02
 -------------------------------
-- Factor functions into module. (cbc)
+- Refactor functions into module. (cbc)
+- Refactor main namespace in tests. (cbc)
 
 Version 1.4.2        2015-04-01
 -------------------------------
