@@ -5,15 +5,26 @@
 from setuptools import setup
 from setuptools import find_packages
 
-__version__ = "1.4.3"
+
+def version():
+    """Get the version number."""
+
+    with open("VERSION.txt") as v:
+        _version = v.read()
+    return _version.strip()
+
+
+__version__ = version()
 
 
 def long_description():
+    """Construct the long description text."""
+
     with open("README.rst") as r:
-        ld1 = r.read()
+        long_description_1 = r.read()
     with open("HISTORY.txt") as h:
-        ld2 = h.read()
-    return "\n".join([ld1, ld2, ])
+        long_description_2 = h.read()
+    return "\n".join([long_description_1, long_description_2, ])
 
 
 setup(name="primer",
@@ -25,6 +36,7 @@ setup(name="primer",
       description="A primer for prime numbers",
       long_description=long_description(),
       url="https://github.com/cbcunc/primer",
+      download_url="https://github.com/cbcunc/primer/tarball/" + __version__,
       keywords="Prime number primes primorial",
       classifiers=["Development Status :: 5 - Production/Stable",
                    "License :: OSI Approved :: "
