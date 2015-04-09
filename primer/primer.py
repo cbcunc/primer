@@ -25,7 +25,7 @@ def primes(n):
     p = []
     if n > 0:
         p = [2, ]
-        for x in range(1,n):
+        for x in range(1, n):
             q = p[-1] + 1
             while True:
                 for y in p:
